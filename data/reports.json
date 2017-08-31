@@ -1,0 +1,51 @@
+[
+
+{ "id":1, "value":"Sales", "sheet":{
+  "styles":[
+    ["wss3",";#efefef;;;;;;;;;;;;;;"],["wss4","#666666;#efefef;left;'PT Sans', Tahoma;15px;;;;top;;no,#434343;;;;;"],["wss5",";#efefef;center;;;;;;middle;;;;;;;"],["wss7",";#d9d9d9;center;;;;;;middle;;;;;;;"],["wss13",";#efefef;;;;;;;;;;;;;;"],["wss19","#666666;#d9ead3;center;'PT Sans', Tahoma;15px;;;;top;nowrap;no,#434343;;;;;"],["wss21","#666666;#fce5cd;center;'PT Sans', Tahoma;15px;;;;top;nowrap;no,#434343;;;;;"],["wss23","#666666;#efefef;left;'PT Sans', Tahoma;15px;;;;middle;nowrap;no,#434343;;;;;"]
+  ],
+  "data": [
+    [1, 1, "Sales 2016", "wss7"],
+    [2, 1, "Store", "wss4"],     [2, 2, "Jan", "wss5"],[2, 3, "Feb", "wss5"],[2, 4, "Mar", "wss5"],[2, 5, "Apr", "wss5"],[2, 6, "May", "wss5"],[2, 7, "Jun", "wss5"],[2, 8, "Jul", "wss5"],[2, 9, "Aug", "wss5"],[2, 10, "Sep", "wss5"],[2, 11, "Oct", "wss5"],[2, 12, "Nov", "wss5"],[2, 13, "Dec", "wss5"],[2, 14, "Total", "wss5"],
+    [3, 1, "={{value}}", "wss3"],[3, 2, "={{janinc}}"],   [3, 3, "={{febinc}}"],   [3, 4, "={{marinc}}"],   [3, 5, "={{aprinc}}"],   [3, 6, "={{mayinc}}"],   [3, 7, "={{juninc}}"],   [3, 8, "={{julinc}}"],   [3, 9, "={{auginc}}"],   [3, 10, "={{sepinc}}"],   [3, 11, "={{octinc}}"],   [3, 12, "={{novinc}}"],   [3, 13, "={{decinc}}"],   [3, 14, "=SUM(B3:M3)"]
+  ],
+  "spans": [
+    [1,1,14,1]
+  ],
+  "sizes":[
+    [0,1,225]
+  ]
+}},
+
+{ "id":2, "value":"Expenses", "sheet":{
+  "styles":[
+    ["wss3",";#efefef;;;;;;;;;;;;;;"],["wss4","#666666;#efefef;left;'PT Sans', Tahoma;15px;;;;top;;no,#434343;;;;;"],["wss5",";#efefef;center;;;;;;middle;;;;;;;"],["wss7",";#d9d9d9;center;;;;;;middle;;;;;;;"],["wss13",";#efefef;;;;;;;;;;;;;;"],["wss19","#666666;#d9ead3;center;'PT Sans', Tahoma;15px;;;;top;nowrap;no,#434343;;;;;"],["wss21","#666666;#fce5cd;center;'PT Sans', Tahoma;15px;;;;top;nowrap;no,#434343;;;;;"],["wss23","#666666;#efefef;left;'PT Sans', Tahoma;15px;;;;middle;nowrap;no,#434343;;;;;"]
+  ],
+  "data": [
+    [1, 1, "Expenses 2016", "wss7"],
+    [2, 1, "Store", "wss4"],     [2, 2, "Jan", "wss5"],[2, 3, "Feb", "wss5"],[2, 4, "Mar", "wss5"],[2, 5, "Apr", "wss5"],[2, 6, "May", "wss5"],[2, 7, "Jun", "wss5"],[2, 8, "Jul", "wss5"],[2, 9, "Aug", "wss5"],[2, 10, "Sep", "wss5"],[2, 11, "Oct", "wss5"],[2, 12, "Nov", "wss5"],[2, 13, "Dec", "wss5"],[2, 14, "Total", "wss5"],
+    [3, 1, "={{value}}", "wss3"],[3, 2, "={{janexp}}"],   [3, 3, "={{febexp}}"],   [3, 4, "={{marexp}}"],   [3, 5, "={{aprexp}}"],   [3, 6, "={{mayexp}}"],   [3, 7, "={{junexp}}"],   [3, 8, "={{julexp}}"],   [3, 9, "={{augexp}}"],   [3, 10, "={{sepexp}}"],   [3, 11, "={{octexp}}"],   [3, 12, "={{novexp}}"],   [3, 13, "={{decexp}}"],   [3, 14, "=SUM(B3:M3)"]
+  ],
+  "spans": [
+    [1,1,14,1]
+  ],
+  "sizes":[[0,1,225]]
+}},
+
+{ "id":3, "value":"Income", "sheet":{
+  "styles":[
+    ["wss3",";#efefef;;;;;;;;;;;;;;"],["wss4","#666666;#efefef;left;'PT Sans', Tahoma;15px;;;;top;;no,#434343;;;;;"],["wss5",";#efefef;center;;;;;;middle;;;;;;;"],["wss7",";#d9d9d9;center;;;;;;middle;;;;;;;"],["wss13",";#efefef;;;;;;;;;;;;;;"],["wss19","#666666;#d9ead3;center;'PT Sans', Tahoma;15px;;;;top;nowrap;no,#434343;;;;;"],["wss21","#666666;#fce5cd;center;'PT Sans', Tahoma;15px;;;;top;nowrap;no,#434343;;;;;"],["wss23","#666666;#efefef;left;'PT Sans', Tahoma;15px;;;;middle;nowrap;no,#434343;;;;;"]
+  ],
+  "data": [
+    [1,1,"Pure Income 2016","wss7"],
+    [2,1,"Stores","wss23"],[2,2,"Jan","wss5"],[2,4,"Feb","wss5"],[2,6,"Mar","wss5"],[2,8,"Apr","wss5"],[2,10,"May","wss5"],[2,12,"Jun","wss5"],[2,14,"Jul","wss5"],[2,16,"Aug","wss5"],[2,18,"Sep","wss5"],[2,20,"Oct","wss5"],[2,22,"Nov","wss5"],[2,24,"Dec","wss5"],                     [2,26,"Pure Inc","wss5"],
+    [3,2,"inc","wss19"],[3,3,"exp","wss21"],[3,4,"inc","wss19"],[3,5,"exp","wss21"],[3,6,"inc","wss19"],[3,7,"exp","wss21"],[3,8,"inc","wss19"],[3,9,"exp","wss21"],[3,10,"inc","wss19"],[3,11,"exp","wss21"],[3,12,"inc","wss19"],[3,13,"exp","wss21"],[3,14,"inc","wss19"],[3,15,"exp","wss21"],[3,16,"inc","wss19"],[3,17,"exp","wss21"],[3,18,"inc","wss19"],[3,19,"exp","wss21"],[3,20,"inc","wss19"],[3,21,"exp","wss21"],[3,22,"inc","wss19"],[3,23,"exp","wss21"],[3,24,"inc","wss19"],[3,25,"exp","wss21"],
+    [4,1,"={{value}}"],    [4,2,"={{janinc}}"],[4,3,"={{janexp}}"],[4,4,"={{febinc}}"],[4,5,"={{febexp}}"],[4,6,"={{marinc}}"],[4,7,"={{marexp}}"],[4,8,"={{aprinc}}"],[4,9,"={{aprexp}}"],[4,10,"={{mayinc}}"],[4,11,"={{mayexp}}"],[4,12,"={{juninc}}"],[4,13,"={{junexp}}"],[4,14,"={{julinc}}"],[4,15,"={{julexp}}"],[4,16,"={{auginc}}"],[4,17,"={{augexp}}"],[4,18,"={{sepinc}}"],[4,19,"={{sepexp}}"],[4,20,"={{octinc}}"],[4,21,"={{octexp}}"],[4,22,"={{novinc}}"],[4,23,"={{novexp}}"],[4,24,"={{decinc}}"],[4,25,"={{decexp}}"],[4,26,"=(B4+D4+F4+H4+J4+L4+N4+P4+R4+T4+V4+X4)-(C4+E4+G4+I4+K4+M4+O4+Q4+S4+U4+W4+Y4)",""]
+  ],
+  "spans":[
+      [1,1,26,1],[2,1,1,2],[2,2,2,1],[2,4,2,1],[2,6,2,1],[2,8,2,1],[2,10,2,1],[2,12,2,1],[2,14,2,1],[2,16,2,1],[2,18,2,1],[2,20,2,1],[2,22,2,1],[2,24,2,1],[2,26,1,2]
+  ],
+  "sizes":[[0,1,235]]
+}}
+
+]

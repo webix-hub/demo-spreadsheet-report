@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="//cdn.webix.com/site/webix.js"></script>
+	<script type="text/javascript" src="//cdn.webix.com/site/spreadsheet/spreadsheet.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="//cdn.webix.com/site/webix.css">
+	<link rel="stylesheet" type="text/css" href="//cdn.webix.com/site/spreadsheet/spreadsheet.css">
+</head>
+<body>
+
+<script type="text/javascript">
+
+	var departments = {
+		view:"list", scroll:false, borderless:true,
+		id:"departments",
+		width:200,
+		select:true,
+		on:{
+			onAfterSelect:function(id){
+				$$("ssheet").setPlaceholder(this.getItem(id));
+			}
+		},
+		url:"data/shops.json"
+	};
+
+	var listPure = {
+		view: "form", id:"right",
+		rows:[
+			{ view: "label", label: "Select a shop" },
+			departments
+		]
+	};
+
+	var datasource = new webix.DataCollection({ url:"data/reports.json" });
+
+	var toolbar = {
+		view:"toolbar",
+		cols:[
+			{ view:"richselect", labelAlign:"right", label:"Reports", id:"reports", options: [], width: 320, 
+			  on:{
+				onChange:function(){
+					showSpreadsheet(this.getValue(), $$("edit").config.sheetState );
+				}
+			  }
+			},
+			{},
+			{ view:"button", value:"Edit", width: 100, id:"edit", sheetState:true, //readonly
+			  click:function(){
+				var readonly = this.config.sheetState = !this.config.sheetState; //readonly changed
+				var reportId = $$("reports").getValue();	// 1 2 3
+
+				if (readonly){
+					//save data
+					datasource.updateItem(reportId, { sheet: $$("ssheet").serialize() });
+				}
+
+				//recreate report view
+				showSpreadsheet(reportId, readonly);
+
+				//change label on button
+				this.config.label = readonly ? "Edit" : "Save";
+				this.refresh();
+			  }
+			}
+		]
+	};
+
+	var reportPanel = {
+		rows:[
+			toolbar,
+			{ id:"ssheet" }
+		]
+	};
+
+	function showSpreadsheet(id, readonly){
+		
+		if (readonly != $$("ssheet").config.readonly){
+			webix.ui({
+				view:"spreadsheet", readonly:readonly, id:"ssheet"
+			}, $$("ssheet"));
+		}
+
+		if (readonly){
+			$$("ssheet").hideGridlines(true);
+			$$("ssheet").hideHeaders(true);
+		}
+
+		if (id)
+			$$("ssheet").parse(datasource.getItem(id).sheet);
+
+		var placeholders = $$("departments").getSelectedId();
+		if (placeholders)
+			$$("ssheet").setPlaceholder($$("departments").getItem(placeholders));
+	};
+
+	webix.ui({
+		type:"space", cols:[
+			listPure,
+			reportPanel
+		]
+	});
+
+	Promise.all([$$("departments").waitData, datasource.waitData]).then(function(){	
+		showSpreadsheet(0, true);
+		$$("reports").getList().parse(datasource);
+		$$("reports").setValue(1);
+		$$("departments").select(1);
+	});
+
+</script>
+</body>
+</html>
