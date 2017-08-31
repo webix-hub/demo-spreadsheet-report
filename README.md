@@ -1,7 +1,11 @@
 SpreeadSheet Reports Demo
 ==========================
 
-You can read more about this demo here ...
+Report engine based on [Webix SpreadSheet Widget](https://webix.com/spreadsheet/). Import Excel files and prepare custom reports.
+
+[Live demo](https://webix-hub.github.io/demo-spreadsheet-report/index.html)
+
+For more info, you can visit [SpreadSheet Documentation](https://docs.webix.com/desktop__spreadsheet.html)
 
 License
 --------
